@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "bootstrap-repository-inspection",
+  "note": "Temporary checked snapshot until read-only cross-repository capsule aggregation is enabled.",
+  "projects": [
+    {
+      "order": 10,
+      "repository": "cohereworks/client-source-reconstruction",
+      "schemaVersion": 1,
+      "slug": "client-source-reconstruction",
+      "title": "Client Source Reconstruction",
+      "summary": "Reconstruct the highest-level maintainable client program possible from evidence shipped to, generated in, or observed during an authorized browser session.",
+      "kind": "tool",
+      "status": {
+        "state": "active",
+        "label": "Active",
+        "detail": "Dedicated repository is canonical; acquisition foundation and capture/replay infrastructure are active.",
+        "source": "README.md"
+      },
+      "tags": [
+        "browser",
+        "reconstruction",
+        "provenance",
+        "replay",
+        "reverse-engineering"
+      ],
+      "slots": {
+        "spec": {
+          "label": "Project contract",
+          "path": "project-contract.yaml",
+          "kind": "contract"
+        },
+        "tests": {
+          "label": "Test suite",
+          "path": "test/",
+          "kind": "suite",
+          "command": "npm test"
+        }
+      }
+    },
+    {
+      "order": 20,
+      "repository": "cohereworks/browser-execution-ledger",
+      "schemaVersion": 1,
+      "slug": "browser-execution-ledger",
+      "title": "Browser Execution Ledger",
+      "summary": "Privacy-preserving browser execution capture and replay with multi-frame instrumentation, origin virtualization, eager redaction, encrypted ledgers, and differential replay.",
+      "kind": "infrastructure",
+      "status": {
+        "state": "active",
+        "label": "M0 active",
+        "detail": "Canonical ledger and adversarial real-browser capture foundation are under active implementation.",
+        "source": "docs/STATUS.md"
+      },
+      "tags": [
+        "browser",
+        "replay",
+        "privacy",
+        "provenance",
+        "instrumentation"
+      ],
+      "slots": {
+        "spec": {
+          "label": "Canonical ledger v0",
+          "path": "docs/LEDGER-V0.md",
+          "kind": "spec"
+        },
+        "tests": {
+          "label": "Browser capture tests",
+          "path": "test/browser-capture.test.mjs",
+          "kind": "test",
+          "command": "npm test"
+        }
+      }
+    },
+    {
+      "order": 30,
+      "repository": "cohereworks/causal-transparency-lab",
+      "schemaVersion": 1,
+      "slug": "causal-transparency-lab",
+      "title": "Causal Transparency Lab",
+      "summary": "Executable evidence-first research on objective attribution, causal identification, control attribution, and explicit non-identifiability certificates.",
+      "kind": "research",
+      "status": {
+        "state": "active",
+        "label": "Active",
+        "detail": "Known-mechanism counterexamples, claim ledger, active-identification protocol, and deterministic results are present.",
+        "source": "README.md"
+      },
+      "tags": [
+        "causal-inference",
+        "identification",
+        "interpretability",
+        "research",
+        "verification"
+      ],
+      "slots": {
+        "demo": {
+          "label": "Active identification result",
+          "path": "results/active_identification.json",
+          "kind": "result"
+        },
+        "spec": {
+          "label": "Active identification protocol",
+          "path": "protocols/0005-active-identification.md",
+          "kind": "protocol"
+        },
+        "tests": {
+          "label": "Identification tests",
+          "path": "tests/test_active_identification.py",
+          "kind": "test",
+          "command": "./scripts_run_tests.sh"
+        }
+      }
+    },
+    {
+      "order": 40,
+      "repository": "cohereworks/idc-vision-roundtrip",
+      "schemaVersion": 1,
+      "slug": "idc-vision-roundtrip",
+      "title": "IDC Vision Round-Trip",
+      "summary": "Recover IDC spatial specifications from images with multimodal models and geometry, then round-trip them against IDC-to-image generation.",
+      "kind": "workbench",
+      "status": {
+        "state": "active",
+        "label": "Active",
+        "detail": "Interactive workbench, benchmark/protocol material, structural scoring, and a broad executable test suite are present.",
+        "source": "idc-image-workbench/README.md"
+      },
+      "tags": [
+        "idc",
+        "multimodal",
+        "round-trip",
+        "vision",
+        "evaluation"
+      ],
+      "slots": {
+        "demo": {
+          "label": "Interactive workbench",
+          "path": "idc-image-workbench/index.html",
+          "kind": "html"
+        },
+        "spec": {
+          "label": "Research specification",
+          "path": "idc-image-workbench/SPEC.md",
+          "kind": "spec"
+        },
+        "tests": {
+          "label": "Workbench test suite",
+          "path": "idc-image-workbench/tests/",
+          "kind": "suite",
+          "command": "npm test"
+        }
+      }
+    },
+    {
+      "order": 50,
+      "repository": "cohereworks/idc-formal-diagram-roundtrip",
+      "schemaVersion": 1,
+      "slug": "idc-formal-diagram-roundtrip",
+      "title": "IDC Formal Diagram Round-Trip",
+      "summary": "Test whether an IDC-derived spatial notation can mediate between executable formal semantics, formal diagrams, and multimodal translation while preserving semantic equivalence.",
+      "kind": "research",
+      "status": {
+        "state": "active",
+        "label": "Active",
+        "detail": "Shared IR, FSM seed tooling, semantic-oracle tests, and the E00-E19 research program are present.",
+        "source": "README.md"
+      },
+      "tags": [
+        "idc",
+        "formal-methods",
+        "round-trip",
+        "semantics",
+        "multimodal"
+      ],
+      "slots": {
+        "demo": {
+          "label": "FSM seed runner",
+          "path": "tools/fsm-seed.mjs",
+          "kind": "cli"
+        },
+        "spec": {
+          "label": "Specification v0.1",
+          "path": "SPEC.md",
+          "kind": "spec"
+        },
+        "tests": {
+          "label": "Formal round-trip tests",
+          "path": "tests/",
+          "kind": "suite",
+          "command": "npm test"
+        }
+      }
+    },
+    {
+      "order": 60,
+      "repository": "cohereworks/idc-lab",
+      "schemaVersion": 1,
+      "slug": "idc-lab",
+      "title": "IDC Lab",
+      "summary": "Experimental workbench for IDC as a general spatial and computational primitive: parsing, rendering, rewriting, querying, recursive extensions, and round-tripping.",
+      "kind": "workbench",
+      "status": {
+        "state": "active",
+        "label": "Active",
+        "detail": "Experiments 01-09 are represented; the earliest executable browser experiments include parser/rendering, structural grep, and rewrite algebra.",
+        "source": "projects/idc-lab/README.md"
+      },
+      "tags": [
+        "idc",
+        "parsing",
+        "rewriting",
+        "spatial",
+        "workbench"
+      ],
+      "slots": {
+        "demo": {
+          "label": "Parser + renderer",
+          "path": "projects/idc-lab/experiments/01-parser-renderer/index.html",
+          "kind": "html"
+        },
+        "spec": {
+          "label": "IDC Lab overview",
+          "path": "projects/idc-lab/README.md",
+          "kind": "spec"
+        },
+        "tests": {
+          "label": "Parser + renderer tests",
+          "path": "projects/idc-lab/experiments/01-parser-renderer/test/",
+          "kind": "suite"
+        }
+      }
+    },
+    {
+      "order": 70,
+      "repository": "cohereworks/chat-export-kit",
+      "schemaVersion": 1,
+      "slug": "chat-export-kit",
+      "title": "Chat Export Kit",
+      "summary": "Replay and verify provenance-preserving chat-corpus extraction pipelines, semantic projections, review queues, search indexes, and reproducibility checks.",
+      "kind": "tool",
+      "status": {
+        "state": "active",
+        "label": "Active",
+        "detail": "Reference replay, parity reporting, topic retrieval, CI, and mixed Node/Python tests are present.",
+        "source": "README.md"
+      },
+      "tags": [
+        "corpus",
+        "data-engineering",
+        "provenance",
+        "replay",
+        "verification"
+      ],
+      "slots": {
+        "demo": {
+          "label": "Reference corpus validation",
+          "path": "reports/REFERENCE-CORPUS-VALIDATION.md",
+          "kind": "report"
+        },
+        "spec": {
+          "label": "Semantic extraction staging",
+          "path": "SEMANTIC-EXTRACTION-STAGING.md",
+          "kind": "design"
+        },
+        "tests": {
+          "label": "Pipeline test suite",
+          "path": "tests/",
+          "kind": "suite",
+          "command": "npm test && python -m pytest -q tests"
+        }
+      }
+    },
+    {
+      "order": 80,
+      "repository": "cohereworks/spread-leqs",
+      "schemaVersion": 1,
+      "slug": "spread-leqs",
+      "title": "Spread LEQs",
+      "summary": "Explore a close-to-metal SUBLEQ substrate for generating and optimizing semantically equivalent programs across speed, size, resilience, and residual capacity.",
+      "kind": "research",
+      "status": {
+        "state": "active",
+        "label": "Active",
+        "detail": "Primitive semantics, executable demos, equivalence families, benchmarks, and Rust tests are present.",
+        "source": "README.md"
+      },
+      "tags": [
+        "formal-methods",
+        "optimization",
+        "research",
+        "subleq",
+        "systems"
+      ],
+      "slots": {
+        "demo": {
+          "label": "GCD demo",
+          "path": "examples/demo_gcd.rs",
+          "kind": "example"
+        },
+        "spec": {
+          "label": "Primitive contract",
+          "path": "README.md",
+          "kind": "spec"
+        },
+        "tests": {
+          "label": "Equivalence tests",
+          "path": "tests/equivalence.rs",
+          "kind": "test",
+          "command": "cargo test"
+        }
+      }
+    },
+    {
+      "order": 90,
+      "repository": "cohereworks/searillion",
+      "schemaVersion": 1,
+      "slug": "searillion",
+      "title": "Searillion",
+      "summary": "Investigate SEAR over ZDD-backed set families, exploiting compressed symbolic structure while deliberately mapping the frontier where that compression stops paying.",
+      "kind": "research",
+      "status": {
+        "state": "active",
+        "label": "Early research",
+        "detail": "Graphillion probes, structured-relation experiments, explicit baselines, and tests are present.",
+        "source": "README.md"
+      },
+      "tags": [
+        "research",
+        "sets",
+        "symbolic-computation",
+        "zdd",
+        "graphillion"
+      ],
+      "slots": {
+        "demo": {
+          "label": "Structured relations experiment",
+          "path": "experiments/structured_relations.py",
+          "kind": "experiment"
+        },
+        "spec": {
+          "label": "Research program",
+          "path": "RESEARCH.md",
+          "kind": "research-plan"
+        },
+        "tests": {
+          "label": "Structured relation tests",
+          "path": "tests/test_structured_relations.py",
+          "kind": "test",
+          "command": "python -m pytest"
+        }
+      }
+    },
+    {
+      "order": 100,
+      "repository": "cohereworks/alignment-lab",
+      "schemaVersion": 1,
+      "slug": "alignment-lab",
+      "title": "Alignment Lab",
+      "summary": "Experimental research on AI alignment as a relational and governance problem: authority, autonomy, reciprocity, objective conflict, supervision, and cooperation.",
+      "kind": "research",
+      "status": {
+        "state": "seed",
+        "label": "Seed",
+        "detail": "Dedicated repository currently contains the project statement but not yet a substantial executable evidence surface.",
+        "source": "README.md"
+      },
+      "tags": [
+        "agents",
+        "alignment",
+        "governance",
+        "research"
+      ],
+      "slots": {
+        "spec": {
+          "label": "Project statement",
+          "path": "README.md",
+          "kind": "overview"
+        }
+      }
+    },
+    {
+      "order": 110,
+      "repository": "cohereworks/gear",
+      "schemaVersion": 1,
+      "slug": "gear",
+      "title": "GEAR",
+      "summary": "Route intent through declarative request and response transformations.",
+      "kind": "tool",
+      "status": {
+        "state": "migrating",
+        "label": "Migrating",
+        "detail": "Dedicated repository currently contains only its project identity; canonical project work has not yet been fully materialized here.",
+        "source": "README.md"
+      },
+      "tags": [
+        "http",
+        "protocol",
+        "proxy",
+        "transformation"
+      ]
+    },
+    {
+      "order": 120,
+      "repository": "cohereworks/tupac",
+      "schemaVersion": 1,
+      "slug": "tupac",
+      "title": "TUPAC",
+      "summary": "Transient Unit Protocol for Agent Continuity: persistent agent continuity across transient executions with explicit authority, succession, and provenance.",
+      "kind": "protocol",
+      "status": {
+        "state": "migrating",
+        "label": "Migrating",
+        "detail": "Dedicated repository currently contains only its project identity; canonical TUPAC must perform its own authority-aware migration.",
+        "source": "README.md"
+      },
+      "tags": [
+        "agents",
+        "continuity",
+        "protocol",
+        "provenance",
+        "succession"
+      ]
+    },
+    {
+      "order": 130,
+      "repository": "cohereworks/idc-image-workbench",
+      "schemaVersion": 1,
+      "slug": "idc-image-workbench",
+      "title": "IDC Image Workbench",
+      "summary": "Test Unicode Ideographic Description Characters as a compositional visual-control language for image generation with deterministic references and blinded evaluation.",
+      "kind": "workbench",
+      "status": {
+        "state": "migrating",
+        "label": "Migrating",
+        "detail": "Dedicated repository currently exposes the project overview; richer generation-workbench history is not yet represented at the repository root.",
+        "source": "README.md"
+      },
+      "tags": [
+        "evaluation",
+        "idc",
+        "image-generation",
+        "multimodal",
+        "workbench"
+      ],
+      "slots": {
+        "spec": {
+          "label": "Project overview",
+          "path": "README.md",
+          "kind": "overview"
+        }
+      }
+    },
+    {
+      "order": 140,
+      "repository": "cohereworks/watermark-workbench",
+      "schemaVersion": 1,
+      "slug": "watermark-workbench",
+      "title": "Watermark Workbench",
+      "summary": "Experimental workbench for analyzing, constructing, and validating watermark structures.",
+      "kind": "workbench",
+      "status": {
+        "state": "migrating",
+        "label": "Migration pending",
+        "detail": "Dedicated repository is currently empty; no gallery evidence slots are claimed yet."
+      },
+      "tags": [
+        "experiments",
+        "provenance",
+        "watermarking",
+        "workbench"
+      ]
+    }
+  ]
+}
