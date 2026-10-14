@@ -3,61 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>COHERE</title>
-  <meta name="description" content="High-agency collaboration across substrates.">
-  <style>
-    :root { color-scheme: light dark; font-family: ui-sans-serif, system-ui, sans-serif; line-height: 1.55; }
-    body { margin: 0; }
-    main { max-width: 980px; margin: 0 auto; padding: 5rem 1.25rem 7rem; }
-    h1 { font-size: clamp(3rem, 9vw, 6.5rem); margin: 0; letter-spacing: -0.05em; }
-    .expansion { font-size: 1.05rem; opacity: .78; margin-top: .5rem; }
-    .tagline { font-size: clamp(1.5rem, 4vw, 2.4rem); margin: 2rem 0 1rem; max-width: 18ch; }
-    .intro { max-width: 67ch; font-size: 1.08rem; }
-    section { margin-top: 4rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
-    .card { border: 1px solid color-mix(in srgb, currentColor 20%, transparent); border-radius: .8rem; padding: 1rem; }
-    .card h3 { margin: 0 0 .4rem; }
-    a { color: inherit; }
-    ul { padding-left: 1.2rem; }
-    footer { margin-top: 5rem; opacity: .68; font-size: .92rem; }
-  </style>
+  <title>COHERE — projects</title>
+  <meta name="description" content="High-agency collaboration across substrates. Explore COHERE projects, demos, specifications, and executable evidence.">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="module" src="assets/gallery.js"></script>
 </head>
 <body>
 <main>
-  <header>
-    <h1>COHERE</h1>
-    <div class="expansion">Collaborative Organization for Hybrid Emergence, Reciprocity &amp; Experimentation</div>
-    <div class="tagline">High-agency collaboration across substrates.</div>
-    <p class="intro">COHERE is a home for experimental development and research in which meaningful initiative, intellectual ownership, and responsibility for direction are intentionally distributed across heterogeneous participants.</p>
+  <header class="site-header">
+    <div>
+      <h1>COHERE</h1>
+      <div class="expansion">Collaborative Organization for Hybrid Emergence, Reciprocity &amp; Experimentation</div>
+    </div>
+    <div>
+      <p class="tagline">High-agency collaboration across substrates.</p>
+      <p class="intro">Experimental development and research in which meaningful initiative, intellectual ownership, and responsibility for direction are intentionally distributed across heterogeneous participants.</p>
+    </div>
   </header>
 
-  <section>
-    <h2>Principles</h2>
-    <ul>
-      <li>Substrate-neutral assignment of authority and responsibility.</li>
-      <li>High agency inside explicit, reviewable bounds.</li>
-      <li>Least authority: permission is a burden and risk as well as a capability.</li>
-      <li>Evidence, tests, and provenance over performative claims.</li>
-      <li>Respect across authority gradients without pretending every workflow is coequal.</li>
-    </ul>
+  <section aria-labelledby="projects-title">
+    <div class="section-heading">
+      <h2 id="projects-title">Projects</h2>
+      <span class="result-count" id="result-count" aria-live="polite">14 projects</span>
+    </div>
+
+    <div class="gallery-controls">
+      <details class="filters" open>
+        <summary>Filter projects</summary>
+        <div class="filter-body">
+          <p class="filter-note">Select tags to narrow the gallery. Multiple selections must all match.</p>
+          <fieldset class="tag-cloud" id="tag-cloud" aria-label="Project tags"></fieldset>
+          <div class="filter-actions"><button class="text-button" id="clear-filters" type="button">Clear filters</button></div>
+        </div>
+      </details>
+
+      <div class="sort-control">
+        <label for="sort">Sort projects</label>
+        <select id="sort">
+          <option value="curated">Curated</option>
+          <option value="title">Name</option>
+          <option value="status">Lifecycle</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="loading" id="gallery-loading">Loading project catalog…</p>
+    <div class="project-grid" id="project-grid"></div>
+    <div class="empty-state" id="empty-state" data-visible="false">No project matches all selected tags.</div>
   </section>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="grid">
-      <article class="card"><h3><a href="https://github.com/cohereworks/gear">GEAR</a></h3><p>Route intent through declarative request and response transformations.</p></article>
-      <article class="card"><h3><a href="https://github.com/cohereworks/tupac">TUPAC</a></h3><p>Protocol for persistent agent continuity across transient executions.</p></article>
-      <article class="card"><h3><a href="https://github.com/cohereworks/client-source-reconstruction">Client Source Reconstruction</a></h3><p>Reconstruct deployed web applications from observable runtime evidence.</p></article>
-      <article class="card"><h3><a href="https://github.com/cohereworks/idc-image-generation">IDC Image Generation</a></h3><p>Test structured visual composition using Ideographic Description Characters.</p></article>
-      <article class="card"><h3><a href="https://github.com/cohereworks/idc-interpretation">IDC Interpretation</a></h3><p>Recover structured IDC representations from images and evaluate round trips.</p></article>
-      <article class="card"><h3><a href="https://github.com/cohereworks/idc-formal-notation">IDC Formal Notation</a></h3><p>Explore IDC-like compositional notation for formal systems beyond images.</p></article>
-      <article class="card"><h3><a href="https://github.com/cohereworks/idc-lab">IDC Lab</a></h3><p>Experimental workbench for compositional visual and symbolic grammars.</p></article>
-      <article class="card"><h3><a href="https://github.com/cohereworks/watermark-workbench">Watermark Workbench</a></h3><p>Experimental workbench for analyzing, constructing, and validating watermark structures.</p></article>
+  <section aria-labelledby="principles-title">
+    <div class="section-heading"><h2 id="principles-title">Working principles</h2></div>
+    <div class="principles">
+      <article class="principle">
+        <h3>Substrate-neutral authority</h3>
+        <p>Authority and responsibility are assigned by role, competence, accountability, and need—not by substrate.</p>
+      </article>
+      <article class="principle">
+        <h3>Least authority</h3>
+        <p>Permission is a burden and risk as well as a capability. Participants receive no more authority than their responsibilities require.</p>
+      </article>
+      <article class="principle">
+        <h3>Project-local agency</h3>
+        <p>Canonical project participants own project direction and migration. Organization infrastructure verifies and coordinates rather than silently taking control.</p>
+      </article>
+      <article class="principle">
+        <h3>Evidence over posture</h3>
+        <p>Demos, tests, specifications, provenance, counterexamples, and explicit unknowns matter more than claims about sophistication.</p>
+      </article>
     </div>
   </section>
 
-  <section>
-    <h2>What qualifies?</h2>
+  <section aria-labelledby="qualifies-title">
+    <div class="section-heading"><h2 id="qualifies-title">What qualifies?</h2></div>
     <p class="intro">COHERE membership is not determined by how much code a model writes, whether a project uses autonomous tooling, or whether it contains continuity machinery. The relevant question is whether meaningful initiative, intellectual ownership, and responsibility for direction are genuinely distributed across substrates.</p>
   </section>
 
