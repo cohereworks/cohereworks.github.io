@@ -13,7 +13,8 @@ const els = {
   count: document.querySelector("#result-count"),
   clear: document.querySelector("#clear-filters"),
   empty: document.querySelector("#empty-state"),
-  loading: document.querySelector("#gallery-loading")
+  loading: document.querySelector("#gallery-loading"),
+  filters: document.querySelector(".filters")
 };
 
 function repoUrl(project) {
@@ -130,8 +131,6 @@ function filteredProjects() {
     projects.sort((a, b) => a.title.localeCompare(b.title));
   } else if (state.sort === "status") {
     projects.sort((a, b) => (STATUS_ORDER[a.status?.state] ?? 99) - (STATUS_ORDER[b.status?.state] ?? 99) || a.title.localeCompare(b.title));
-  } else if (state.sort === "updated") {
-    projects.sort((a, b) => String(b.updatedAt || "").localeCompare(String(a.updatedAt || "")) || a.title.localeCompare(b.title));
   } else {
     projects.sort((a, b) => (a.order ?? 9999) - (b.order ?? 9999));
   }
@@ -151,6 +150,10 @@ async function boot() {
   state.sort = params.get("sort") || "curated";
   if (![...els.sort.options].some(option => option.value === state.sort)) state.sort = "curated";
   els.sort.value = state.sort;
+
+  if (matchMedia("(max-width: 760px)").matches && state.tags.size === 0) {
+    els.filters?.removeAttribute("open");
+  }
 
   const response = await fetch("catalog/projects.json", { cache: "no-cache" });
   if (!response.ok) throw new Error(`catalog fetch failed: ${response.status}`);
