@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "capsulePath": ".cohere/site/project.json",
+  "repositories": [
+    "cohereworks/chat-export-kit",
+    "cohereworks/gear",
+    "cohereworks/tupac",
+    "cohereworks/watermark-workbench",
+    "cohereworks/client-source-reconstruction",
+    "cohereworks/spread-leqs",
+    "cohereworks/searillion",
+    "cohereworks/alignment-lab",
+    "cohereworks/browser-execution-ledger",
+    "cohereworks/causal-transparency-lab",
+    "cohereworks/idc-vision-roundtrip",
+    "cohereworks/idc-formal-diagram-roundtrip",
+    "cohereworks/idc-image-workbench",
+    "cohereworks/idc-lab"
+  ]
+}
