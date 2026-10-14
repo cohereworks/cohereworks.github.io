@@ -1,0 +1,8 @@
+{
+  "name": "cohereworks-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/validate-catalog.mjs"
+  }
+}
